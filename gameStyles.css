@@ -1,0 +1,232 @@
+@keyframes text1 {
+  0% { opacity: 0.0; transform: scale(.8, .8);}
+  100% {opacity: 1.0; transform: scale(1, 1); }
+}
+
+@keyframes text2 {
+  0% { opacity: 0.0; transform: scale(.8, .8);}
+  50% { opacity: 0.0; transform: scale(.8, .8);}
+  100% {opacity: 1.0; transform: scale(1, 1); }
+}
+
+@keyframes spin1 {
+  0% { transform: rotateX(0deg) rotateY(0deg);  }
+  50% { transform: rotateX(0deg) rotateY(0deg);  }
+  100% { transform: rotateX(180deg) rotateY(180deg); }
+}
+
+@keyframes spin2 {
+  0% { transform: rotateX(0deg) rotateY(0deg);  }
+  50% { transform: rotateX(0deg) rotateY(0deg);  }
+  100% { transform: rotateX(360deg) rotateY(180deg); }
+}
+
+@keyframes flipUp {
+  0% { transform: rotatex(0deg) translateY(0vh); }
+  100% { transform: rotateX(45deg) translateY(-20vh); }
+}
+
+@keyframes flipDown {
+  0% { transform: rotatex(0deg) translateY(0vh); }
+  100% { transform: rotateX(-45deg) translateY(20vh); }
+}
+
+@keyframes flipLeft {
+  0% { transform: rotatex(0deg) translateY(0vh); }
+  100% { transform: rotateX(45deg) translateY(-20vh); }
+}
+
+@keyframes flipRight {
+  0% { transform: rotatex(0deg) translateY(0vh); }
+  100% { transform: rotateX(45deg) translateY(-20vh); }
+}
+
+
+
+@keyframes bigButton {
+  0% { box-shadow: none; background-color: white;}
+  75% {box-shadow: none; background-color: white;}
+  100% { box-shadow:0px 0px 20px rgba(10, 0, 0, 0.4); background-color: white;}
+}
+
+@keyframes fadein {
+  0% { box-shadow: none; background-color: white;}
+  100% { box-shadow:0px 0px 20px rgba(10, 0, 0, 0.4); background-color: white;}
+}
+
+@keyframes fadeOut {
+  0% { box-shadow:0px 0px 20px rgba(10, 0, 0, 0.4); }
+  100% { box-shadow: none;}
+}
+
+body {
+  font-family: "Trebuchet MS", verdana, arial, sans;
+  perspective: 600px;
+}
+
+h1 {
+	margin-top:7vh;
+	text-align: center;
+	font-weight: 1000px;
+	
+}
+
+h2 {
+	margin-bottom:10vh;
+	text-align: center;
+	font-weight: 1000px;
+	
+}
+
+.title {
+
+	animation: text1 2s ease-out;
+	
+}
+
+#game {
+	
+	width: 43vw;
+	display: block;
+    margin: auto;
+	margin-top: 10vh;
+	
+
+}
+
+#border {
+	
+	width: 43vw;
+	display: block;
+    margin: auto;
+	margin-top: 10vh;
+}
+
+#borderL {
+	
+	position:fixed;
+	top:0;
+	left: 0;
+	width: 20vw;
+	height: 100vh;
+
+}
+
+#borderR {
+	position:fixed;
+	top:0;
+	right: 0;
+	width: 20vw;
+	height: 100vh;
+
+}
+
+#borderB {
+	
+    position: fixed;
+    z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+
+}
+
+
+	
+#square {
+  display: inline-block;
+  width: 10vw;
+  height: 10vw;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  
+  margin: 2vw;
+
+  transform-style: preserve3d;
+  transition-duration: 0.5s;
+}
+
+#square:hover {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+	
+}
+
+#square:active {
+	background-color: rgba(50, 50, 255, 0.8);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 20px inset rgba(0, 0, 0, 0.9);
+
+}
+
+#bigSquare {
+	
+	width: 20vw;
+	height: 20vw;
+	background-color: white;
+	animation: bigButton 3s linear;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  
+	margin:auto;
+	
+	margin-top: 10vh;
+
+	transform-style: preserve3d;
+	transition-duration: 0.5s;
+}
+
+#bigSquare:hover {
+	background-color: rgba(255, 92, 51, 1);
+	box-shadow: 0px 0px 40px rgba(255, 0, 0, 0.4), 0px 0px 40px 0px rgba(0, 0, 0, 0.1) inset;
+	
+}
+
+#bigSquare:active {
+	background-color: rgba(255, 92, 51, 1);
+	box-shadow: 0px 0px 40px rgba(255, 0, 0, 0.4), 0px 0px 40px 0px rgba(0, 0, 0, 0.1) inset;
+	
+}
+
+
+
+#theSquare {
+  display: inline-block;
+  width: 10vw;
+  height: 10vw;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(10, 0, 0, 0.4);
+  
+  margin: 2vw;
+
+  transform-style: preserve3d;
+  transition-duration: 0.5s;
+}
+
+#theSquare:hover {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+#theSquare:active {
+	background-color: rgba(255, 92, 51, 1);
+	box-shadow: 0px 0px 40px rgba(255, 0, 0, 0.4), 0px 0px 40px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+#theSquare1 {
+  display: inline-block;
+  width: 10vw;
+  height: 10vw;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(10, 0, 0, 0.4);
+  
+  margin: 2vw;
+
+  transform-style: preserve3d;
+  transition-duration: 0.5s;
+}
+
+#theSquare1:hover {
+	box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.3);
+}
+
+#theSquare1:active {
+	background-color: rgba(255, 92, 51, 1);
+	box-shadow: 0px 0px 40px rgba(255, 0, 0, 0.4), 0px 0px 40px 0px rgba(0, 0, 0, 0.1) inset;
+}
